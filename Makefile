@@ -29,7 +29,6 @@ SRCS = main.c \
 	   place_tetriminos.c \
 	   shift_array.c \
 	   output.c \
-	   bonus_ncurses.c \
 
 INCS = libft.h fillit.h
 
@@ -46,7 +45,7 @@ all : $(NAME)
 
 $(NAME) : $(OBJECTS) $(addprefix $(LIBDIR), libft.a)
 	@echo -n 'Compiling $(NAME): '
-	@if $(CC) -lncurses -o $(NAME) $(OBJECTS) -L./$(LIBDIR) $(LIBRARIES) ; \
+	@if $(CC) -o $(NAME) $(OBJECTS) -L./$(LIBDIR) $(LIBRARIES) ; \
 		then echo '✔' ; \
 		else echo 'FAILED' ; fi
 

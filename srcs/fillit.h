@@ -33,7 +33,6 @@ int				ft_place_tetri(t_list *head, unsigned short *map, \
 void			ft_l_shift(unsigned short *map, int shift, int size);
 void			ft_r_shift(unsigned short *map, int shift, int size);
 char			*ft_print_map(t_list *head, int size);
-void			ft_printcolor(char *str);
 void			ft_addtetri(t_list *head, unsigned short *map,
 		int size, int pos);
 void			ft_deltetri(t_list *head, unsigned short *map,

@@ -17,21 +17,12 @@ static int	ft_error(int ac, char **av)
 	int fd;
 	int ret;
 
-	if (ac > 3 || (ac == 3 && ft_strcmp(av[1], "-v") != 0) || ac < 2)
+	if (ac != 2)
 	{
 		ft_putstr("usage: ./fillit [-v] ] file\n");
 		return (-1);
 	}
-	if (ft_strcmp(av[1], "-v") != 0)
-	{
-		if (((fd = open(av[1], O_RDONLY)) == -1) ||
-				((ret = read(fd, NULL, 0)) == -1))
-		{
-			ft_putstr("error\n");
-			return (-1);
-		}
-	}
-	else if (((fd = open(av[2], O_RDONLY)) == -1) ||
+	if (((fd = open(av[1], O_RDONLY)) == -1) ||
 			((ret = read(fd, NULL, 0)) == -1))
 	{
 		ft_putstr("error\n");
