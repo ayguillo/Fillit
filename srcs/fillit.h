@@ -16,7 +16,6 @@
 
 # include "../libft/libft.h"
 # include <fcntl.h>
-# include <ncurses.h>
 
 # define DREF_HC (*((unsigned short*)(head->content)))
 # define HCS head->content_size

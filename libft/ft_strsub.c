@@ -15,11 +15,9 @@
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	size_t	j;
 	char	*str;
 
 	i = 0;
-	j = 0;
 	if (!s || (int)len < 0)
 		return (NULL);
 	while (s[i] && i < len)

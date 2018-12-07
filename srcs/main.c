@@ -19,7 +19,7 @@ static int	ft_error(int ac, char **av)
 
 	if (ac != 2)
 	{
-		ft_putstr("usage: ./fillit [-v] ] file\n");
+		ft_putstr("usage: ./fillit file\n");
 		return (-1);
 	}
 	if (((fd = open(av[1], O_RDONLY)) == -1) ||
@@ -50,10 +50,7 @@ int			main(int ac, char **av)
 	valid_size = ft_create_map(lst, size_min,
 			ft_div_arr_sup((size_min * size_min), 16));
 	map = ft_print_map(*lst, valid_size);
-	if (ft_strcmp(av[1], "-v") != 0)
-		ft_putstr(map);
-	else
-		ft_printcolor(map);
+	ft_putstr(map);
 	free(map);
 	ft_lstclear(lst);
 	return (0);

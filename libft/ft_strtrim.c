@@ -18,10 +18,8 @@ char		*ft_strtrim(char const *s)
 	int		pre;
 	int		len;
 	int		i;
-	int		size;
 
 	pre = -1;
-	size = 0;
 	if (!s)
 		return (NULL);
 	len = ft_strlen(s) - 1;
